@@ -1,0 +1,253 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background:  url(../img/bg/bg-body.gif);
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    width:100%;
+    filter: brightness(100%);
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .contenedor {
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px 20px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  
+  .tarjeta {
+    background: #191c29;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+      max-width: 550px;
+      color: #fff;
+      z-index: -1;
+      transition: .3s ease all;
+      transform: rotateY(0deg);
+      transform-style: preserve-3d;
+  }
+  
+
+    .tarjeta::before {
+    content: "";
+    width: 101%;
+    height: 101%;
+    border-radius: 10px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #f7f7f7, #53565f 43%, #080a17);
+      position: absolute;
+      z-index: -1;
+      top: -.5%;
+      left: -.5%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .tarjeta::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #f7f7f7, #53565f 43%, #080a17);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  .tarjeta.active {
+      transform: rotateY(180deg);
+  }
+  
+  .tarjeta > div {
+      padding: 30px;
+      border-radius: 15px;
+      min-height: 315px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+  }
+  
+  
+  .tarjeta .delantera {
+      width: 100%;
+      background: url(../img/bg/bg-card.jpg);
+      background-size: cover;
+  }
+  
+  .delantera .chip {
+      width: 100%;
+      max-width: 50px;
+      margin-bottom: 20px;
+  }
+  
+  .delantera .grupo .label {
+      font-size: 16px;
+      color:#f7f7f7;
+      margin-bottom: 5px;
+  }
+  
+  .delantera .grupo .numero {
+      color:#f7f7f7;
+      font-size: 22px;
+      text-transform: uppercase;
+  }
+  
+  .delantera .flexbox {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  }
+  
+  form {
+    background-color: #0f0f11;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #CCCCCC;
+    margin-bottom: 5px;
+    margin-top: -30px;
+    width: 40%;
+    max-height: 200px;
+    position: absolute;
+    left:30%
+  }
+  
+  label {
+    color:#f7f7f7;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #76787a;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color:#76787a;
+    color:#191c29;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    margin-top: 0px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #8f9192;
+  }
+   .submit  {
+     display: flex;
+     vertical-align: middle;
+  }
+
+  header {
+   width: 100%;
+   clear: both; 
+   content: '';
+   display: table;
+}
+
+  nav{
+    background-color: var(--primario);
+    display: flex;
+    padding-right: 1rem;
+    position: fixed;
+    left: 0;
+    top:0;
+    right: 0;
+    margin-bottom: 20px;
+  }
+    
+  .menu{
+      width: 100%;
+      margin:auto;
+  }
+
+  .logo{
+      width: 200px;
+      margin-left: 70px;
+      margin-top: 10px;
+      padding: 1px;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 25px;
+  padding: 25px 0;
+  float: left;
+}
+nav ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+  
+/*aqui falta*/
+.result{
+  grid-column: 3 / 6;
+  grid-row: 4;
+  
+  color:#f7f7f7;
+  font-size: 16px;
+}
+ 
