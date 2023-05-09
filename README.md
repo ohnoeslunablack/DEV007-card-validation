@@ -18,6 +18,7 @@ de tarjetas de crédito en una plataforma de pagos electrónicos llamada
 Universal Payment. 
 La idea detrás de este proyecto es asegurarnos de que los usuarios puedan realizar
 transacciones en línea de manera segura y sin problemas.
+![logo](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/logo.png)
 
 
 ### ¿Quiénes son los principales usuarios del producto?
@@ -25,6 +26,7 @@ transacciones en línea de manera segura y sin problemas.
 Los principales usuarios del producto son personas que realizan transacciones en línea 
 con tarjetas de crédito. Esto incluye compradores en línea, vendedores y cualquier persona 
 que realice transacciones financieras en línea.
+![client](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/UP1.jpeg)
 
 ### ¿Cuáles son los objetivos de estos usuarios en relación con tu producto?
 
@@ -52,6 +54,7 @@ En cuanto a la experiencia de usuario, se decidió que el proceso de validación
 lo más transparente posible para los usuarios. La validación se realiza automáticamente en segundo plano 
 y los usuarios solo verán un mensaje que les indica si el número de tarjeta de crédito es válido o no.
 
+![brand](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/UP2.jpeg)
 
 ## 2. Uso de la función isValid
 
@@ -79,6 +82,27 @@ Los usuarios pueden utilizar estas funciones en sus propias aplicaciones o sitio
 una forma segura y confiable de procesar pagos en línea. Por ejemplo, una tienda en línea podría utilizar
 las funciones de Universal Payment para verificar los números de tarjeta de crédito de los clientes 
 antes de procesar un pedido, asegurando que la información de pago sea correcta y protegida.
+
+La interfaz es simple, solo basta introducir el numero de tarjeta y presionar el boton validar.
+![validacion](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/validacion.jpeg)
+
+En caso de que se envie el formulario vacío arrojará un mensaje solicitando el número de tarjeta.
+![vacio](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/empty.jpeg)
+
+Si el usuario introduce caracteres "no digitos" arrojará un mensaje de invalido.
+![string](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/string.jpeg)
+
+Si el usuario introduce menos caracteres arrojará un mensaje de invalido.
+![incomplete](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/incomplete.jpeg)
+
+Si el usuario introduce un numero de tarjeta invalido arrojará un mensaje de invalido.
+![invalid](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/invalid.jpeg)
+
+Cuando el usuario introduce un numero de tarjeta valido pero no se encuentra la marca arrojará un mensaje de valido con el numero de tarjeta enmascarado y la marca deconocida.
+![nobrand](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/nobrand.jpeg)
+
+Cuando el usuario introduce un numero de tarjeta valido y se encuentra la marca arrojará un mensaje de valido con el numero de tarjeta enmascarado y la marca identificada.
+![brand](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/brand.jpeg)
 
 ## 6. Consideraciones técnicas
 
