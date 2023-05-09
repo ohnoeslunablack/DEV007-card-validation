@@ -18,6 +18,8 @@ de tarjetas de crédito en una plataforma de pagos electrónicos llamada
 Universal Payment. 
 La idea detrás de este proyecto es asegurarnos de que los usuarios puedan realizar
 transacciones en línea de manera segura y sin problemas.
+
+
 ![logo](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/logo.png)
 
 
@@ -26,7 +28,7 @@ transacciones en línea de manera segura y sin problemas.
 Los principales usuarios del producto son personas que realizan transacciones en línea 
 con tarjetas de crédito. Esto incluye compradores en línea, vendedores y cualquier persona 
 que realice transacciones financieras en línea.
-![client](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/UP1.jpeg)
+![client](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/UP2.jpeg)
 
 ### ¿Cuáles son los objetivos de estos usuarios en relación con tu producto?
 
@@ -54,7 +56,7 @@ En cuanto a la experiencia de usuario, se decidió que el proceso de validación
 lo más transparente posible para los usuarios. La validación se realiza automáticamente en segundo plano 
 y los usuarios solo verán un mensaje que les indica si el número de tarjeta de crédito es válido o no.
 
-![brand](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/UP2.jpeg)
+![brand](https://github.com/ohnoeslunablack/DEV007-card-validation/blob/main/img/UP1.jpeg)
 
 ## 2. Uso de la función isValid
 
