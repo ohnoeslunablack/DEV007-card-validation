@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tarjeta de crédito válida</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<header>
+	<div class="encabezado">
+		<div class="menu">
+			<img class="logo" src="img/logo.PNG" alt="logo" style="float:right">
+			<nav>
+				<ul>
+					<li> <a href="#">PERSONAL</a></li>
+					<li> <a href="#">EMPRESARIAL</a></li>
+					<li> <a href="#">RECURSOS</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<body>
+	<div class="contenedor">
+		<section class="tarjeta" id="tarjeta">
+			<div class="delantera">
+				<div class="logo-marca" id="logo-marca">
+					<!-- <img src="img/logos/visa.png" alt=""> -->
+				</div>
+				<img src="img/chip-tarjeta.png" class="chip" alt="">
+				<div class="datos">
+					<div class="grupo" id="numero">
+						<p class="label">Número Tarjeta</p>
+						<p class="numerot">#### #### #### ####</p>
+					</div>
+				</div>
+			</div>
+		</section>
+   </div>
+<form>
+	<label for="card-number">Número de tarjeta:</label>
+	<input type="text" id="card-number" name="card-number" placeholder="**** **** **** ****" value="">
+		  <button type="submit" value="">Validar</button>
+		  <div class="result" id="result"></div>
+  </form>
+		  <script type="module" src="index.js"></script>
+</body>
+
+</html>
